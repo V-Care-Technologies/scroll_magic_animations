@@ -221,4 +221,70 @@ input[type='checkbox']:checked + label > span:before{
     transform: translate3d(0,-.5em,0) rotate(45deg);
   }
 }
- 
+
+
+
+
+/* Extra */
+body{
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+}
+.center{
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 25px;
+}
+.frame{
+  padding: 5px; 
+  background-image:url('led.svg');
+  border-radius: 5px;
+}
+.card .title{
+  text-align:center;
+}
+
+/* Hover Scroll Effect */
+.frame{
+  width:300px;
+  height:300px;
+  overflow: hidden;
+}
+.frame img{
+  object-fit: cover;
+  width:100%;
+  transform: translateY(0);
+  transition: 2s ease-out;
+}
+.frame:hover img {
+  object-fit: cover;
+  width:100%;
+  /* Considering frame height   */
+  transform: translateY(calc(-100% + 300px));
+  transition: 2s ease-out;
+}
+/*OR */
+/* .frameimg:hover{
+  object-fit: cover;
+  width:100%;
+  transform: translateY(-100%);
+  transition: 2s ease-out;
+} */
+
+/* With background image  */
+.bg-image{
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(https://source.unsplash.com/500x1500/);
+  transition: background-position 2s ease-out;
+  
+}
+.frame:hover .bg-image{
+    background-position:0 100%;
+ }
